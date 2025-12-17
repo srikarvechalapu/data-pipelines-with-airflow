@@ -69,8 +69,8 @@
 
 ## About the Maintainer
 
-This project is currently maintained by Akshita Mary John. Akshita is a Product Owner with a passion for robust data solutions and efficient pipeline development. She brings 3+ years of experience in product strategy and development, with a keen interest in applying data engineering principles to real-world challenges.
+This project is currently maintained by Sai Srikar Vechalapu. He is a Product Owner with a passion for robust data solutions and efficient pipeline development. Sai Srikar brings 3+ years of experience in product strategy and development, with a keen interest in applying data engineering principles to real-world challenges.
 
-*   **Email**: a.john1009@gmail.com
-*   **LinkedIn**: https://www.linkedin.com/in/akshita-mary-john-35542a12a/
-*   **GitHub**: Akshita Mary John
+*   **Email**: Sai Srikar Vechalapu
+*   **LinkedIn**: https://www.linkedin.com/in/srikarvechalapu/
+*   **GitHub**: https://github.com/srikarvechalapu
