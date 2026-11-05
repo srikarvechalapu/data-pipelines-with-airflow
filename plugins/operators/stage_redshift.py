@@ -18,7 +18,7 @@ class StageToRedshiftOperator(BaseOperator):
         SECRET_ACCESS_KEY '{}'
         FORMAT AS JSON '{}'
         TIMEFORMAT AS 'epochmillisecs'
-        region 'us-west-2'
+        REGION '{}'
     """
     @apply_defaults
     def __init__(self,
@@ -30,6 +30,7 @@ class StageToRedshiftOperator(BaseOperator):
                  delimiter=",",
                  ignore_headers=1,
                  JSONPaths="",
+                 region="us-west-2",
                  *args, **kwargs):
 
         super(StageToRedshiftOperator, self).__init__(*args, **kwargs)
@@ -41,6 +42,7 @@ class StageToRedshiftOperator(BaseOperator):
         self.ignore_headers = ignore_headers
         self.aws_credentials_id = aws_credentials_id
         self.JSONPaths = JSONPaths
+        self.region = region
 
     def execute(self, context):
         aws_hook = AwsHook(self.aws_credentials_id)
@@ -63,6 +65,7 @@ class StageToRedshiftOperator(BaseOperator):
             credentials.secret_key,
             #self.ignore_headers, #this is used for CSV file
             #self.delimiter, #this is used for CSV file
-            json_path
+            json_path,
+            self.region
         )
         redshift.run(formatted_sql)
